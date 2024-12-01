@@ -14,7 +14,7 @@ class TabBarController: UITabBarController {
         
         view.backgroundColor = .white
         
-        let vcOne = UINavigationController(rootViewController: HomeViewController())
+        let vcOne = UINavigationController(rootViewController: HomeVC())
         let vcTwo = UINavigationController(rootViewController: LiderboardVC())
         let vcThree = UINavigationController(rootViewController: ProfileVC())
         

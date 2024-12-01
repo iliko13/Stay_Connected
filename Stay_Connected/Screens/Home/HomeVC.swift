@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Foundation
 
 // MARK: - Main Question Model
 struct Question {
@@ -76,7 +75,6 @@ let mockData: [Question] = [
         isAnswered: false
     )
 ]
-
 
 class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate {
     
@@ -259,7 +257,6 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             repliesCount: question.replies.count,
             isAnswered: question.isAnswered
         )
-
         
         return cell
     }
@@ -276,9 +273,3 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     // >>>>>>>>>>>>>>> CustomTableViewCell
     
 }
-
-
-
-
-
-

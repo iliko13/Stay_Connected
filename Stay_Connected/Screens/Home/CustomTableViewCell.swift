@@ -71,7 +71,7 @@ class CustomTableViewCell: UITableViewCell {
             customLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 35),
             
             tickContainerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -19),
-            tickContainerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 65),
+            tickContainerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 45),
             tickContainerView.widthAnchor.constraint(equalToConstant: 30),
             tickContainerView.heightAnchor.constraint(equalToConstant: 30),
             
