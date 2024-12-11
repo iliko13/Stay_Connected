@@ -186,18 +186,18 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
             questionLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 85),
             questionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
             
-            generalButton.widthAnchor.constraint(equalToConstant: 180),
-            generalButton.heightAnchor.constraint(equalToConstant: 39),
+            generalButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            generalButton.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -5),
             generalButton.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 20),
             generalButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             
-            privateButton.widthAnchor.constraint(equalToConstant: 180),
-            privateButton.heightAnchor.constraint(equalToConstant: 39),
+            privateButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            privateButton.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 5),
             privateButton.topAnchor.constraint(equalTo: generalButton.topAnchor),
             privateButton.leadingAnchor.constraint(equalTo: generalButton.trailingAnchor, constant: 9),
             
-            searchBar.widthAnchor.constraint(equalToConstant: 362),
-            searchBar.heightAnchor.constraint(equalToConstant: 38),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             searchBar.topAnchor.constraint(equalTo: generalButton.bottomAnchor, constant: 19),
             searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             
@@ -262,6 +262,14 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
 
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+//        let selectedQuestion = mockData[indexPath.row]
+        let questionDetails = QuestionDetailsViewController()
+//        questionDetails.question = selectedQuestion
+        navigationController?.pushViewController(questionDetails, animated: true)
     }
     
     // MARK: - UITableView Delegate
